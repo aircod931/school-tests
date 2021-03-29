@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+<div class="panel-left">
+    <a href="/"><div class="panel-option{% if (app.request.pathInfo == path('index')) %} active{% endif %}"><i class="fas fa-home"></i> Strona główna</div></a>
+    <a href="/admin/password/change"><div class="panel-option{% if (app.request.pathInfo == path('admin_password_change')) %} active{% endif %}"><i class="fas fa-cog"></i> Zarządzanie kontem</div></a>
+</div>
+    <div class="main">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
