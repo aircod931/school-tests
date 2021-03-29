@@ -1,0 +1,58 @@
+@import "colors";
+
+.box{
+  background-color: $color-white;
+  min-height: 300px;
+  width: 70%;
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  img{
+    width: 50%;
+  }
+}
+
+.panel-left{
+  width: 250px;
+  min-height: 350px;
+  color: $color-white;
+  padding: 10px;
+  background-color: #3088BF;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
+}
+
+.main{
+  width: 50%;
+  min-height: 350px;
+  background-color: $color-white;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
+  padding: 5px;
+}
+
+.panel-option{
+  padding: 10px;
+  margin-top: 5px;
+
+}
+.changePasswordText{
+  font-size: 18px;
+}
+
+.active{
+  background-color: #135788;
+}
+
+.panel-option:hover{
+  background-color: #1c72b0;
+}
