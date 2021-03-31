@@ -1,10 +1,18 @@
 {% extends 'index.html.twig' %}
 
 {% block content %}
+    Tutaj możesz zaktualizować podstawowe informacje na temat swojego konta
     {{ form_start(changePasswordForm) }}
     {{ form_row(changePasswordForm.oldPassword, { 'label': 'Aktualne hasło'}) }}
     {{ form_row(changePasswordForm.newPassword, { 'label': 'Nowe hasło'}) }}
     {{ form_widget(changePasswordForm) }}
     <button type="submit" class="btn btn-primary">Zmień hasło</button>
     {{ form_end(changePasswordForm) }}
+
+    {{ form_start(changeUsernameForm) }}
+    {{ form_row(changeUsernameForm.newUsername, { 'label': 'Nowa nazwa'}) }}
+    {{ form_widget(changeUsernameForm) }}
+    <button type="submit" class="btn btn-primary">Zmień nazwę</button>
+    {{ form_end(changeUsernameForm) }}
+
 {% endblock %}
