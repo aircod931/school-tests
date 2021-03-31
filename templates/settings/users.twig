@@ -1,0 +1,19 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+    Tutaj możesz dodać nowego ucznia do systemu
+    {{ form_start(addUserForm) }}
+    {{ form_row(addUserForm.username, { 'label': 'Nazwa użytkownika'}) }}
+    {{ form_row(addUserForm.password, { 'label': 'Hasło'}) }}
+    {{ form_widget(addUserForm) }}
+    <button type="submit" class="btn btn-primary">Dodaj ucznia</button>
+    {{ form_end(addUserForm) }}
+
+    {{ form_start(changeUserGroupForm) }}
+    {{ form_row(changeUserGroupForm.username, { 'label': 'Nazwa użytkownika'}) }}
+    {{ form_row(changeUserGroupForm.name, { 'label': 'Nazwa grupy'}) }}
+    {{ form_widget(changeUserGroupForm) }}
+    <button type="submit" class="btn btn-primary">Dodaj do grupy</button>
+    {{ form_end(changeUserGroupForm) }}
+
+{% endblock %}
