@@ -23,17 +23,25 @@
 
 .panel-left{
   width: 250px;
-  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  min-height: 70%;
   color: $color-white;
   padding: 10px;
   background-color: #3088BF;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
 }
-
+.bottom-panel{
+  margin-top: 50px;
+}
 .main{
   width: 50%;
-  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70%;
   background-color: $color-white;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.19);
@@ -53,6 +61,6 @@
   background-color: #135788;
 }
 
-.panel-option:hover{
+.panel-option:not(.active):hover{
   background-color: #1c72b0;
 }
