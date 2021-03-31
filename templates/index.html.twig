@@ -3,7 +3,15 @@
 <div class="container">
 <div class="panel-left">
     <a href="/"><div class="panel-option{% if (app.request.pathInfo == path('index')) %} active{% endif %}"><i class="fas fa-home"></i> Strona główna</div></a>
-    <a href="/admin/password/change"><div class="panel-option{% if (app.request.pathInfo == path('admin_password_change')) %} active{% endif %}"><i class="fas fa-cog"></i> Zarządzanie kontem</div></a>
+    <a href="/admin/settings"><div class="panel-option{% if (app.request.pathInfo == path('admin_settings')) %} active{% endif %}"><i class="fas fa-cog"></i> Zarządzanie kontem</div></a>
+    <a href="/admin/users"><div class="panel-option{% if (app.request.pathInfo == path('admin_users')) %} active{% endif %}"><i class="fas fa-users"></i> Dodaj uczniów</div></a>
+    <a href="/admin/groups"><div class="panel-option{% if (app.request.pathInfo == path('admin_groups')) %} active{% endif %}"><i class="fas fa-cog"></i> Zarządzanie grupami</div></a>
+    <a href="/admin/settings"><div class="panel-option{% if (app.request.pathInfo == path('admin_settings')) %} active{% endif %}"><i class="far fa-file-alt"></i> Moje testy</div></a>
+    <a href="/admin/settings"><div class="panel-option{% if (app.request.pathInfo == path('admin_settings')) %} active{% endif %}"><i class="fas fa-server"></i> Baza wyników</div></a>
+<div class="bottom-panel">
+    <div class="panel-option"><i class="fas fa-user"></i> Zalogowany: {{ app.user.username }}</div>
+    <div class="panel-option"><a href="/logout"><i class="fas fa-sign-out-alt"></i> Wyloguj się</a></div>
+</div>
 </div>
     <div class="main">
         {% block content %}
