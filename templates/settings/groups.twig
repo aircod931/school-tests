@@ -1,0 +1,11 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+    Tutaj możesz zaktualizować podstawowe informacje na temat swojego konta
+    {{ form_start(addGroupForm) }}
+    {{ form_row(addGroupForm.name, { 'label': 'Nazwa grupy'}) }}
+    {{ form_widget(addGroupForm) }}
+    <button type="submit" class="btn btn-primary">Dodaj grupę</button>
+    {{ form_end(addGroupForm) }}
+
+{% endblock %}
