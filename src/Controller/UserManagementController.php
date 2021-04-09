@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+use App\Entity\Group;
 use App\Entity\User;
 use App\Form\AddUserFormType;
 use App\Form\ChangeUserGroupFormType;
@@ -52,8 +53,8 @@ class UserManagementController extends AbstractController
                 ->getRepository('App:User')
                 ->findBy(array('id' => $form_ChangeUserGroup->get('username')->getData()));
             $group = $form_ChangeUserGroup['name']->getData();
-           $user[0]->setSchoolGroup($group->getID());
-
+            $newGroup = $entityManager->getRepository(Group::class)->find($group->getID());
+            $user[0]->setSchoolGroup($newGroup);
             $entityManager->persist($user[0]);
             $entityManager->flush();
             return $this->redirect('/admin/users?changeGroup=success');
