@@ -8,4 +8,12 @@
     <button type="submit" class="btn btn-primary">Dodaj grupę</button>
     {{ form_end(addGroupForm) }}
 
+    {{ form_start(addTestToGroupForm) }}
+    {{ form_row(addTestToGroupForm.groupName, { 'label': 'Nazwa grupy'}) }}
+    {{ form_row(addTestToGroupForm.quizQuestion, { 'label': 'Nazwa testu'}) }}
+    {{ form_widget(addTestToGroupForm) }}
+    <button type="submit" class="btn btn-primary">Udostępnij test</button>
+    {{ form_end(addTestToGroupForm) }}
+
+
 {% endblock %}
